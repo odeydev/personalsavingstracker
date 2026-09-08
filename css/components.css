@@ -1,0 +1,16 @@
+.add-button {
+  color: var(--color-text);
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+  font-size: 20px;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  border: none;
+}
+
+.add-button .fas {
+  font-size: 19px;
+  color: var(--color-text);
+}

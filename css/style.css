@@ -1,12 +1,137 @@
-*,
-*::before, 
-*::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+:root {
+  /* Backgrounds */
+  --color-bg: #080b18;
+  --color-surface: #11162a;
+
+  /* Text */
+  --color-text: #f7f7fc;
+  --color-text-muted: #9298ad;
+
+  /* Brand / Accents */
+  --color-primary: #8b5cf6;
+  --color-secondary: #22d3ee;
+
+  /* Feedback */
+  --color-success: #16b364;
+
+  /* Borders */
+  --color-border: #252b43;
+
+  /* Typography */
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-amount: "Sora", sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+}
+
+.amount {
+  font-family: var(--font-amount);
+  letter-spacing: 1px;
+  margin-top: 5px;
+  font-size: 30px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 98%;
+  background: var(--color-surface);
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+}
+
+header img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.greeting {
+  font-size: 15px;
+  margin-right: 40px;
+}
+
+.savings-hero {
+  position: relative;
+  padding: 8px;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  margin: 0 auto;
+  margin-top: 10px;
+  border: 2px solid var(--color-border);
+  overflow: hidden;
+  border-radius: 10px;
+  height: 200px;
+}
+
+.savings-hero p {
+  position: absolute;
+  bottom: 5px;
+  left: 3;
+  color: var(--color-text-muted);
+  font-size: 10px;
+}
+
+.hero-left {
+  width: 90%;
+  margin-right: 8px;
+}
+
+.chart {
+  width: 125px;
+}
+
+.main-cta {
+  width: 100%;
+  padding: 8px;
+  text-align: center;
+}
+
+.trend-container {
+  width: 98%;
+  padding: 8px;
+  margin: 0 auto;
+  background-color: var(--color-surface);
+  margin-top: 34px;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.savings-trend {
+  width: 100%;
 }
