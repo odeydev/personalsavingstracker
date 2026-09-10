@@ -126,6 +126,7 @@ header img {
   width: 98%;
   padding: 8px;
   margin: 0 auto;
+  margin-bottom: 20px;
   background-color: var(--color-surface);
   margin-top: 34px;
   border: 2px solid var(--color-border);
