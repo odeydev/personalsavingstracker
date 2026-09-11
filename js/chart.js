@@ -16,7 +16,7 @@ new Chart(progressChart, {
 });
 
 new Chart(savingsTrendChart, {
-  type: "bar",
+  type: "line",
   data: {
     labels: ["Sep 1", "Sep 2", "Sep 3", "Sep 4", "Sep 5", "Sep 6"],
     datasets: [

@@ -54,65 +54,102 @@
     <!-- home page -->
     <main>
       <!-- main hero -->
-      <section class="savings-hero">
-        <div class="hero-left">
-          <h4>Total Savings</h4>
-          <h2 class="amount">₦10,600.00</h2>
-          <p>Last updated 12:43pm, on 2026-09-06</p>
+      <div id="home-page">
+        <section class="savings-hero">
+          <div class="hero-left">
+            <h4>Total Savings</h4>
+            <h2 class="amount">₦10,600.00</h2>
+            <p>Last updated 12:43pm, on 2026-09-06</p>
+          </div>
+
+          <!-- savings progress chart -->
+          <div class="hero-right">
+            <!-- <canvas class="chart" id="progress-chart"> </canvas> -->
+          </div>
+        </section>
+        <div class="main-cta">
+          <button type="button" class="add-button" id="add-btn">
+            <i class="fas fa-plus"></i>
+            Add Savings
+          </button>
         </div>
 
-        <!-- savings progress chart -->
-        <div class="hero-right">
-          <canvas class="chart" id="progress-chart"> </canvas>
-        </div>
-      </section>
-      <div class="main-cta">
-        <button type="button" class="add-button" id="add-btn">
-          <i class="fas fa-plus"></i>
-          Add Savings
-        </button>
+        <!-- savings trend chart -->
+        <section class="trend-container">
+          <h4>Savings trend</h4>
+          <canvas class="savings-trend" id="trend-chart"> </canvas>
+        </section>
+
+        <!-- recent transactions -->
+        <section class="recent-trnxs-section">
+          <h2>Recent Transactions</h2>
+          <div class="recent">
+            <h4>₦20,000</h4>
+            <p>Withdrawal</p>
+            <small>2026-09-10, 03:04 PM</small>
+          </div>
+          <div class="recent">
+            <h4>₦10,000</h4>
+            <p>Deposit</p>
+            <small>2026-07-12, 17:01 PM</small>
+          </div>
+          <div class="recent">
+            <h4>₦5,000</h4>
+            <p>Deposit</p>
+            <small>2026-08-29, 12:56 PM</small>
+          </div>
+          <button class="recentTrnxBtn" id="recent">See full report</button>
+        </section>
       </div>
-
-      <!-- savings trend chart -->
-      <section class="trend-container">
-        <h4>Savings trend</h4>
-        <canvas class="savings-trend" id="trend-chart"> </canvas>
-      </section>
-
-      <!-- recent transactions -->
-      <section class="recent-trnxs-section">
-        <h2>Recent Transactions</h2>
-        <div class="recent">
-          <h4>₦20,000</h4>
-          <p>Withdrawal</p>
-          <small>2026-09-10, 03:04 PM</small>
-        </div>
-        <div class="recent">
-          <h4>₦10,000</h4>
-          <p>Deposit</p>
-          <small>2026-07-12, 17:01 PM</small>
-        </div>
-        <div class="recent">
-          <h4>₦5,000</h4>
-          <p>Deposit</p>
-          <small>2026-08-29, 12:56 PM</small>
-        </div>
-        <button class="recentTrnxBtn" id="recent">See full report</button>
-      </section>
 
       <!-- bottom navigation -->
       <section class="bottom-navigation">
         <i class="fas fa-home"></i>
-        <i class="fas fa-plus"></i>
-        <i class="fas fa-chart-line"></i>
+        <i class="fas fa-plus" id="add-btn"></i>
+        <i class="fa-solid fa-magnifying-glass-dollar"></i>
+
         <i class="fas fa-wallet"></i>
       </section>
 
       <!-- add savings page / modal -->
+      <div class="modal-container">
+        <div class="add-savings-modal">
+          <h2>Add Savings</h2>
+          <form id="add-savings-form" class="savings-form">
+            <div class="input-group">
+              <i class="fas fa-coins"></i>
+              <input
+                type="number"
+                name="number"
+                id="amount"
+                placeholder="amount"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <i class="fas fa-credit-card"></i>
+              <input
+                type="text"
+                name="method"
+                id="method"
+                placeholder="e.g Bank transfer"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <input type="date" name="date" id="date" required />
+            </div>
+            <div class="modal-actions">
+              <button type="button" id="close">Cancel</button>
+              <button type="submit" id="save">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/app.js" type="text/javascript"></script>
     <script src="js/chart.js"></script>
+    <script src="js/app.js" type="text/javascript"></script>
     <script src="manifest.json"></script>
   </body>
 </html>

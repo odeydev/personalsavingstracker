@@ -1,3 +1,45 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 98%;
+  background: var(--color-surface);
+  border-radius: 10px;
+  border: 2px solid var(--color-border);
+}
+
+.savings-hero {
+  position: relative;
+  padding: 8px;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  margin: 0 auto;
+  margin-top: 10px;
+  border: 2px solid var(--color-border);
+  overflow: hidden;
+  border-radius: 10px;
+  height: 200px;
+}
+
+.trend-container {
+  width: 98%;
+  padding: 8px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: var(--color-surface);
+  margin-top: 34px;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+}
+
 .add-button {
   color: var(--color-text);
   padding: 10px 20px;
@@ -13,4 +55,8 @@
 .add-button .fas {
   font-size: 19px;
   color: var(--color-text);
+}
+
+.modal-container {
+  display: none;
 }
