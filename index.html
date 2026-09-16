@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -46,9 +46,13 @@
   </head>
   <body>
     <header>
-      <img src="assets/images/psa-logo-main.png" alt="" />
-      <h3 class="greeting">Welcome, Odey</h3>
-      <span><i class="fas fa-bars"></i></span>
+      <img src="assets/images/useravatar.jpeg" alt="" />
+      <h3>
+        Welcome back, Odey<br /><span class="subtitle"
+          >Let's pick up where we left off!</span
+        >
+      </h3>
+      <img src="/assets/images/psa-logo-main.png" class="logo" alt="psa logo" />
     </header>
 
     <!-- home page -->
@@ -59,7 +63,7 @@
           <div class="hero-left">
             <h4>Total Savings</h4>
             <h2 class="amount">₦10,600.00</h2>
-            <p>Last updated 12:43pm, on 2026-09-06</p>
+            <p>Last updated <span class="time">12:43pm</span>, on 2026-09-06</p>
           </div>
 
           <!-- savings progress chart -->
@@ -82,33 +86,52 @@
 
         <!-- recent transactions -->
         <section class="recent-trnxs-section">
-          <h2>Recent Transactions</h2>
-          <div class="recent">
-            <h4>₦20,000</h4>
-            <p>Withdrawal</p>
-            <small>2026-09-10, 03:04 PM</small>
+          <h3>Recent Transactions</h3>
+          <div class="recent-trnxs-card withdrawal">
+            <h4 class="recent-amount">₦20,000</h4>
+            <p class="recent-type">Withdrawal</p>
+            <small class="date-time"
+              >2026-09-10, <span class="time">03:04 PM</span></small
+            >
           </div>
-          <div class="recent">
-            <h4>₦10,000</h4>
-            <p>Deposit</p>
-            <small>2026-07-12, 17:01 PM</small>
+          <div class="recent-trnxs-card deposit">
+            <h4 class="recent-amount">₦10,000</h4>
+            <p class="recent-type">Deposit</p>
+            <small class="date-time"
+              >2026-07-12, <span class="time">17:01 PM</span></small
+            >
           </div>
-          <div class="recent">
-            <h4>₦5,000</h4>
-            <p>Deposit</p>
-            <small>2026-08-29, 12:56 PM</small>
+          <div class="recent-trnxs-card deposit">
+            <h4 class="recent-amount">₦5,000</h4>
+            <p class="recent-type">Deposit</p>
+            <small class="date-time"
+              >2026-08-29, <span class="time">12:56 PM</span></small
+            >
           </div>
-          <button class="recentTrnxBtn" id="recent">See full report</button>
+          <button class="recent-trnx-btn" id="recent">See full report</button>
         </section>
       </div>
 
       <!-- bottom navigation -->
       <section class="bottom-navigation">
-        <i class="fas fa-home"></i>
-        <i class="fas fa-plus" id="add-btn"></i>
-        <i class="fa-solid fa-magnifying-glass-dollar"></i>
-
-        <i class="fas fa-wallet"></i>
+        <div class="icons">
+          <div class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </div>
+          <div class="nav-item">
+            <i class="fas fa-plus"> </i>
+            <span>Add</span>
+          </div>
+          <div class="nav-item">
+            <i class="fas fa-solid fa-magnifying-glass-dollar"></i>
+            <span>Insights</span>
+          </div>
+          <div class="nav-item">
+            <i class="fas fa-wallet"></i>
+            <span>Wallet</span>
+          </div>
+        </div>
       </section>
 
       <!-- add savings page / modal -->
@@ -137,6 +160,7 @@
               />
             </div>
             <div class="input-group">
+              <i class="fas fa-calendar-day"></i>
               <input type="date" name="date" id="date" required />
             </div>
             <div class="modal-actions">

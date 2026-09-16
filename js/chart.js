@@ -24,10 +24,6 @@ new Chart(savingsTrendChart, {
         label: "Daily",
         data: [12, 14, 8, 18, 4, 15],
       },
-      {
-        label: "Weekly",
-        data: [21, 10, 14, 10, 1, 12],
-      },
     ],
   },
 });
