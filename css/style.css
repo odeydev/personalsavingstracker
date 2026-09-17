@@ -94,7 +94,7 @@ p {
 
 main {
   width: 100%;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 20px;
 }
 
@@ -107,6 +107,7 @@ header img {
   height: 50px;
   object-fit: cover;
   border-radius: 50%;
+  box-shadow: var(--shadow-soft);
 }
 
 .greeting {
@@ -128,10 +129,11 @@ header img {
 .savings-hero p {
   position: absolute;
   bottom: 5px;
-  left: 0;
+  left: 10px;
   color: var(--color-text-muted);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.3px;
+  font-family: var(--font-date-time);
 }
 
 .date-time {
@@ -244,4 +246,18 @@ header img {
   color: var(--color-primary);
   transform: translateY(-3px);
   cursor: pointer;
+}
+
+.chart-empty-state,
+.transactions-empty-state {
+  text-align: center;
+  padding: 30px 15px;
+  color: var(--color-text-muted);
+}
+
+.chart-empty-state i,
+.transactions-empty-state i {
+  color: var(--color-primary);
+  font-size: 28px;
+  margin-bottom: 12px;
 }
