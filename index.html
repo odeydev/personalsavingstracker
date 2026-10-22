@@ -1,162 +1,137 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/utilities.css" />
-    <meta
-      name="theme-color"
-      content="#080b18"
-      media="(prefers-color-scheme: light)"
-    />
-    <meta
-      name="theme-color"
-      content="#080b18"
-      media="(prefers-color-scheme: dark)"
-    />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/icons/android-chrome-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/icons/android-chrome-512x512.png"
-    />
-    <link rel="icon" type="image/png" href="assets/icons/favicon-16x16.png" />
-    <link rel="manifest" href="assets/icons/site.webmanifest" />
-    <title>Personal Savings Tracker</title>
-  </head>
-  <body>
-    <header>
-      <img src="assets/images/useravatar.jpeg" alt="" />
-      <h3>Welcome back, Odey</h3>
-      <img src="/assets/images/psa-logo-main.png" class="logo" alt="psa logo" />
-    </header>
 
-    <!-- home page -->
-    <main>
-      <!-- main hero -->
-      <div id="home-page">
-        <section class="savings-hero">
-          <div class="hero-left">
-            <h4>Total Savings</h4>
-            <h2 class="amount">₦0.00</h2>
-            <p class="hero-subtext">
-              Start your savings journey by adding your first transaction.
-            </p>
-          </div>
-        </section>
-        <div class="main-cta">
-          <button type="button" class="add-button" id="add-btn">
-            <i class="fas fa-plus"></i>
-            Add Savings
-          </button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/utilities.css" />
+  <meta name="theme-color" content="#080b18" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#080b18" media="(prefers-color-scheme: dark)" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/android-chrome-512x512.png" />
+  <link rel="icon" type="image/png" href="assets/icons/favicon-16x16.png" />
+  <link rel="manifest" href="assets/icons/site.webmanifest" />
+  <title>Personal Savings Tracker</title>
+</head>
 
-        <!-- savings trend chart -->
-        <section class="trend-container">
-          <h4>Savings trend</h4>
-          <div class="chart-empty-state" id="trend-empty">
-            <i class="fas fa-chart-line"></i>
-            <p>Savings chart will be available after a few transactions.</p>
-          </div>
-          <canvas class="savings-trend" id="trend-chart" hidden> </canvas>
-        </section>
+<body>
+  <header>
+    <img src="assets/images/useravatar.jpeg" alt="" />
+    <h3>Welcome back, Odey</h3>
+  </header>
 
-        <!-- recent transactions -->
-        <section class="recent-trnxs-section">
-          <h3>Recent Transactions</h3>
-          <div id="transactions-container">
-            <div class="transactions-empty-state">
-              <i class="fas fa-receipt"></i>
-              <p>No transactions yet.</p>
-              <small>Your savings activity will appear here.</small>
-            </div>
-          </div>
-          <button class="recent-trnx-btn" id="recent">See full report</button>
-        </section>
-      </div>
-
-      <!-- bottom navigation -->
-      <section class="bottom-navigation">
-        <div class="icons">
-          <div class="nav-item">
-            <i class="fas fa-home"></i>
-            <span>Home</span>
-          </div>
-          <div class="nav-item">
-            <i class="fas fa-plus"> </i>
-            <span>Add</span>
-          </div>
-          <div class="nav-item">
-            <i class="fas fa-solid fa-magnifying-glass-dollar"></i>
-            <span>Insights</span>
-          </div>
-          <div class="nav-item">
-            <i class="fas fa-wallet"></i>
-            <span>Wallet</span>
-          </div>
+  <!-- home page -->
+  <main>
+    <!-- main hero -->
+    <div id="home-page">
+      <section class="savings-hero">
+        <div class="hero-left">
+          <h4>Total Savings</h4>
+          <h2 class="amount">₦0.00</h2>
+          <p class="hero-subtext">
+            Start your savings journey by adding your first transaction.
+          </p>
         </div>
       </section>
+      <div class="main-cta">
+        <button type="button" class="add-button" id="add-btn">
+          <i class="fas fa-plus"></i>
+          Add Savings
+        </button>
+      </div>
 
-      <!-- add savings page / modal -->
-      <div class="modal-container">
-        <div class="add-savings-modal">
-          <h2>Add Savings</h2>
-          <form id="add-savings-form" class="savings-form">
-            <div class="input-group">
-              <i class="fas fa-coins"></i>
-              <input
-                type="number"
-                name="number"
-                id="amount"
-                placeholder="Savings amount"
-                required
-              />
-            </div>
-            <div class="input-group">
-              <i class="fas fa-credit-card"></i>
-              <input
-                type="text"
-                name="method"
-                id="method"
-                placeholder="Method e.g Bank transfer"
-                required
-              />
-            </div>
-            <div class="input-group">
-              <i class="fas fa-calendar-day"></i>
-              <input type="date" name="date" id="date" required />
-            </div>
-            <div class="modal-actions">
-              <button type="button" id="close">Cancel</button>
-              <button type="submit" id="save">Save</button>
-            </div>
-          </form>
+      <!-- savings trend chart -->
+      <section class="trend-container">
+        <h4>Savings trend</h4>
+        <div class="chart-empty-state" id="trend-empty">
+          <i class="fas fa-chart-line"></i>
+          <p>Savings chart will be available after a few transactions.</p>
+        </div>
+        <canvas class="savings-trend" id="trend-chart" hidden> </canvas>
+      </section>
+
+      <!-- recent transactions -->
+      <section class="recent-trnxs-section">
+        <h3>Recent Transactions</h3>
+        <div id="transactions-container">
+          <div class="transactions-empty-state">
+            <i class="fas fa-receipt"></i>
+            <p>No transactions yet.</p>
+            <small>Your savings activity will appear here.</small>
+          </div>
+        </div>
+        <button class="recent-trnx-btn" id="recent">
+          <i class="fas fa-arrow-trend-up"></i> See full report
+        </button>
+      </section>
+    </div>
+
+    <!-- bottom navigation -->
+    <section class="bottom-navigation">
+      <div class="icons">
+        <div class="nav-item">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-plus"> </i>
+          <span>Add</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-solid fa-magnifying-glass-dollar"></i>
+          <span>Insights</span>
+        </div>
+        <div class="nav-item">
+          <i class="fas fa-wallet"></i>
+          <span>Wallet</span>
         </div>
       </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/chart.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/practice.js"></script>
-  </body>
+    </section>
+    <button class="menu" id="menu-toggle">
+      <i class="fas fa-plus"></i>
+    </button>
+
+    <!-- add savings page / modal -->
+    <div class="modal-container">
+      <div class="add-savings-modal">
+        <h2>Add Savings</h2>
+        <form id="add-savings-form" class="savings-form">
+          <div class="input-group">
+            <i class="fas fa-coins"></i>
+            <input type="number" name="number" id="amount" placeholder="Savings amount" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-credit-card"></i>
+            <input type="text" name="method" id="method" placeholder="Method e.g Bank transfer" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-calendar-day"></i>
+            <input type="date" name="date" id="date" required />
+          </div>
+          <div class="modal-actions">
+            <button type="button" id="close">Cancel</button>
+            <button type="submit" id="save">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/transactions.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/practice.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+
 </html>
