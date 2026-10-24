@@ -55,9 +55,9 @@
         <h4>Savings trend</h4>
         <div class="chart-empty-state" id="trend-empty">
           <i class="fas fa-chart-line"></i>
-          <p>Savings chart will be available after a few transactions.</p>
+          <p>Savings chart will be available after your first transaction.</p>
         </div>
-        <canvas class="savings-trend" id="trend-chart" hidden> </canvas>
+        <canvas class="savings-trend" id="trend-chart"> </canvas>
       </section>
 
       <!-- recent transactions -->
@@ -105,10 +105,11 @@
     <div class="modal-container">
       <div class="add-savings-modal">
         <h2>Add Savings</h2>
+        <small class="error hidden">Enter an amount above 0</small>
         <form id="add-savings-form" class="savings-form">
           <div class="input-group">
             <i class="fas fa-coins"></i>
-            <input type="number" name="number" id="amount" placeholder="Savings amount" required />
+            <input type="number" name="number" id="amount" placeholder="Savings amount" inputmode="numeric" required />
           </div>
           <div class="input-group">
             <i class="fas fa-credit-card"></i>
@@ -128,9 +129,6 @@
   </main>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="js/app.js"></script>
-  <script src="js/transactions.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/practice.js"></script>
   <script src="js/ui.js"></script>
 </body>
 

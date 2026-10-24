@@ -10,3 +10,11 @@ menuToggle.addEventListener("click", () => {
     bottomNav.style.display = "none";
   }
 });
+
+addBtn.addEventListener("click", () => {
+  modal.style.display = "flex";
+});
+
+cancelBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
