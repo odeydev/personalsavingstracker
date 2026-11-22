@@ -156,7 +156,7 @@ form.addEventListener("submit", (event) => {
     })}`;
 
     //  removing modal and clearing form
-    modal.remove();
+    modal.style.display = "none";
     form.reset();
 
     const chartData = updateChart();
@@ -168,6 +168,7 @@ form.addEventListener("submit", (event) => {
     if (chartEmptyState) {
       chartEmptyState.remove();
     }
+    R;
     trendChart.update();
   }
 });

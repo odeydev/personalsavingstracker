@@ -12,6 +12,7 @@ menuToggle.addEventListener("click", () => {
 });
 
 addBtn.addEventListener("click", () => {
+  console.log("button clicked");
   modal.style.display = "flex";
 });
 

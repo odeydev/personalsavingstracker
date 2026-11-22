@@ -300,6 +300,8 @@ header img {
 }
 
 .nav-item i {
+  padding: 5px 15px;
+  border-radius: 50px;
   font-size: 20px;
   color: var(--color-text-muted);
   transition:
@@ -311,6 +313,7 @@ header img {
   color: var(--color-primary);
   transform: translateY(-3px);
   cursor: pointer;
+  background: rgba(139, 92, 246, 0.15);
 }
 
 .chart-empty-state,
