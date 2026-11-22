@@ -109,17 +109,6 @@
   --z-dropdown: 100;
   --z-fixed: 1000;
   --z-modal: 10000;
-
-  /* =====================================
-     BREAKPOINTS
-  ===================================== */
-
-  /* CSS custom properties cannot be used
-     directly inside media queries.
-
-     Keep breakpoint values in the media
-     queries themselves.
-  */
 }
 
 /* =========================================
@@ -174,11 +163,9 @@ p {
 
 .amount {
   margin-top: var(--space-1);
-
   font-family: var(--font-amount);
   font-size: var(--text-2xl);
   font-weight: 700;
-
   letter-spacing: -1.5px;
   color: var(--color-text);
 }
@@ -189,7 +176,6 @@ p {
 
 main {
   width: var(--width-full);
-
   padding-top: var(--space-2);
   padding-bottom: var(--space-5);
 }
@@ -204,7 +190,6 @@ main {
 
 .error {
   margin-top: var(--space-3);
-
   font-family: var(--font-body);
   font-size: 17px;
   color: var(--color-danger);
